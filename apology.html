@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Before I Go…</title>
+
+<style>
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ffe6f2;
+    padding: 120px 40px;
+    font-size: 30px;
+    line-height: 2.3;
+}
+
+h1 {
+    font-size: 52px;
+    margin-bottom: 40px;
+}
+
+button {
+    padding: 22px 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: #ffc0cb;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 18px;
+    min-width: 300px;
+}
+
+button:hover {
+    background-color: #ffb6c1;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Before I go… 👀</h1>
+
+<p>
+Before I go, I want to say something clearly.<br><br>
+
+What I said last time — and the blocking — were not meant to be disrespectful.
+It came from a sudden moment and a bit of jealousy.
+I admit I handled it poorly.<br><br>
+
+I felt like I should clarify things because it seemed unfinished and too childish.<br><br>
+
+Like you, I don’t usually do this.
+But this time something pushed me to take the chance and apologize for how I handled things.<br><br>
+
+Even if neither of us was 100% perfect in this situation,
+I just wanted to break the silence and open up.<br><br>
+
+That’s it.<br><br>
+
+The door is open from my side.
+If you ever feel like talking, I’m open to it.
+Take your time — just let me know.
+</p>
+
+<br><br>
+
+<h2>Apology status?</h2>
+
+<button onclick="accepted()">Apology accepted 😌</button>
+<button id="noBtn" onclick="noOption()">No</button>
+<button onclick="dontCare()">I really don’t care 🫡</button>
+
+<br><br><br>
+
+<h2>Your move.</h2>
+
+<button onclick="openForm()">Submit your response</button>
+<button onclick="leaveIt()">Let’s leave it</button>
+<button onclick="openWhatsApp()">Reply directly</button>
+
+<script>
+
+function accepted(){
+    alert("That’s appreciated. Very brave move 🫡");
+}
+
+let moved = false;
+
+function noOption(){
+    if(!moved){
+        alert("Just kidding, it wasn’t even an option 😏");
+
+        const btn = document.getElementById("noBtn");
+        btn.style.position = "absolute";
+        btn.style.left = Math.random() * (window.innerWidth - 350) + "px";
+        btn.style.top = Math.random() * (window.innerHeight - 200) + "px";
+
+        moved = true;
+    }
+}
+
+function dontCare(){
+    alert("Emotional damage 💣 Message received and felt personally 🫡");
+}
+
+function leaveIt(){
+    alert("No worries. Take care 🎀");
+}
+
+function openForm(){
+    window.open("https://forms.gle/X5M7cz9JjcUD2EaD6","_blank");
+}
+
+function openWhatsApp(){
+    window.open("https://wa.me/94775421558","_blank");
+}
+
+</script>
+
+</body>
+</html>
