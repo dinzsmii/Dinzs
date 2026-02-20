@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>A Small Note 🎂</title>
+
+<style>
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    padding: 100px 40px;
+    font-size: 28px;
+    line-height: 2.2;
+    transition: transform 1.2s ease, opacity 1.2s ease, filter 1.2s ease;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+button {
+    padding: 22px 45px;
+    border-radius: 50px;
+    border: none;
+    background-color: #ffc0cb;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 25px;
+}
+
+.confetti {
+    position: fixed;
+    font-size: 45px;
+    animation: explode 3s ease-out forwards;
+}
+
+@keyframes explode {
+    0% { transform: translateY(0); opacity:1; }
+    100% { transform: translateY(120vh); opacity:0; }
+}
+</style>
+</head>
+
+<body>
+
+<h1>🎉🎂🥳</h1>
+
+<p>
+I hope today brings you a moment to pause and feel proud of how far you have come. 👏🥂<br><br>
+I genuinely wish that everything you have been working toward returns to you in the best form.<br><br>
+Sending positive energy your way today 🙋‍♀️✨<br><br>
+And I wish you many many peaceful birthdays to celebrate ahead 🎀
+</p>
+
+<p>
+Okay… I’m singing this in my head now 🎶<br><br>
+
+Happy Birthday to you!<br>
+Happy Birthday to you!!<br>
+Happy Birthday 🦒!!!<br>
+Happy Birthday to you!!!!<br><br>
+
+👏🏼👏🏼👏🏼👏🏼👏🏼
+</p>
+
+<button onclick="claimEnergy()">Claim your positive energy ✨</button>
+
+<script>
+
+window.onload = function(){
+    const emojis = ["🥂","🥳","🎂","🎉"];
+    for(let i=0;i<50;i++){
+        let e = document.createElement("div");
+        e.className="confetti";
+        e.innerText=emojis[Math.floor(Math.random()*emojis.length)];
+        e.style.left=Math.random()*100+"vw";
+        e.style.animationDuration=(2+Math.random()*2)+"s";
+        document.body.appendChild(e);
+    }
+}
+
+function claimEnergy(){
+    alert("Energy received. Use it wisely 🙋‍♀️👏🏼");
+
+    document.body.style.transform="scale(1.3)";
+    document.body.style.opacity="0";
+    document.body.style.filter="blur(10px)";
+
+    setTimeout(function(){
+        window.location.href="apology.html";
+    },1200);
+}
+
+</script>
+
+</body>
+</html>
