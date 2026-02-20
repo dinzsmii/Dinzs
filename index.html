@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Wait… 👀</title>
+
+<style>
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #ffe6f2;
+    padding: 120px 40px;
+    font-size: 30px;
+    line-height: 2.3;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+button {
+    padding: 22px 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: #ffc0cb;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 15px;
+    min-width: 280px;
+}
+
+button:hover {
+    background-color: #ffb6c1;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Wait… just a second 👀🎀</h1>
+
+<p>
+Before you say “What is this now?!” 😭<br>
+Before you assume anything — relax 🤯<br><br>
+
+Take a deep breath and count with me 🎀<br><br>
+
+1 🙋‍♀️<br>
+2 🙋‍♀️<br>
+3 🙋‍♀️<br>
+4 🙋‍♀️<br>
+5 🙋‍♀️<br><br>
+
+Okay ✨<br><br>
+
+You don’t have to smile…<br>
+but you probably will 👀✨
+</p>
+
+<button onclick="continuePage()">Continue 🥂</button>
+<button onclick="whatIsThis()">Wait… what is this 😭</button>
+<button id="noBtn" onclick="refuse()">No, I refuse 👎🏻</button>
+<button onclick="judge()">I’m judging already 😈</button>
+
+<script>
+
+function continuePage(){
+    window.location.href="birthday.html";
+}
+
+function whatIsThis(){
+    alert("It’s not a scam, I promise 😌✨ Just click continue.");
+}
+
+function judge(){
+    alert("Excuse me?? Not allowed 🚫");
+}
+
+let moved = false;
+
+function refuse(){
+    if(!moved){
+        alert("Too slow 😭✨ This button has commitment issues.");
+
+        const btn = document.getElementById("noBtn");
+        btn.style.position = "absolute";
+        btn.style.left = Math.random() * (window.innerWidth - 300) + "px";
+        btn.style.top = Math.random() * (window.innerHeight - 200) + "px";
+
+        moved = true;
+    }
+}
+
+</script>
+
+</body>
+</html>
